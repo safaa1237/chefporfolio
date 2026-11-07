@@ -1,0 +1,2 @@
+import styles from './Footer.module.css';
+export default function Footer(){return <footer id="footer" className={styles.footer}><div className={styles.top}><p className="eyebrow">FROM THE KITCHEN, WITH CARE.</p><a href="#home">Back to top ↑</a></div><p className={styles.name}>Clara Sweetnam<span>✳</span></p><div className={styles.bottom}><p>Chef · Trained in Munich · Experience at Dallmayr</p><nav aria-label="Footer navigation"><a href="#work">The work</a><a href="#about">The person</a></nav><p>© Clara Sweetnam</p></div></footer>}

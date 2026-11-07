@@ -1,0 +1,4 @@
+import Image from 'next/image';
+import { dishes } from '@/data/portfolio';
+import styles from './Gallery.module.css';
+export default function Gallery(){return <section id="work" className={styles.section} aria-labelledby="gallery-title"><div className={styles.heading}><div><p className="eyebrow">01 — THE WORK</p><h2 id="gallery-title">Selected <em>plates.</em></h2></div><p>A few favourites from the kitchen.<br/>Each one, a little piece of my story.</p></div><div className={styles.grid}>{dishes.map((dish,i)=><figure className={styles.card} key={dish.title}><div className={styles.photo}><Image src={dish.image} alt={dish.alt} fill placeholder="blur" sizes="(max-width: 600px) 88vw, (max-width: 900px) 42vw, 28vw"/></div><figcaption><div><h3>{dish.title}</h3><p>{dish.detail}</p></div><span>0{i+1}</span></figcaption></figure>)}</div></section>}
